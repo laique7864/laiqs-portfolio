@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Topbar from "./component/Topbar";
+import Sidebar from "./component/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +17,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`font-inter ${inter.className} bg-background scroll-smooth`}>
+      <body className="m-0 p-0">
+      <Topbar />
+        <div >
+          {/* <Sidebar /> */}
+          <main >{children}</main>
+        </div>
+      </body>
     </html>
   );
 }
