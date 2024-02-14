@@ -48,7 +48,7 @@ function page() {
             role="tabpanel"
             aria-labelledby="stats-tab"
           >
-            <dl className="flex max-w-screen-xl justify-evenly r gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
+            <dl className="grid grid-cols-1 sm:grid-cols-4 gap-5 max-w-screen-xl justify-evenly r  p-4 mx-auto text-gray-900  xl:grid-cols-6 dark:text-white sm:p-8">
               <div className="flex flex-col items-center justify-center">
                 <dt className="mb-2 text-3xl font-extrabold">2+ Year</dt>
                 <dd className="text-gray-500 dark:text-gray-400">Experince</dd>

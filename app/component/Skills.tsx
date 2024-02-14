@@ -2,7 +2,7 @@ import React from "react";
 
 function Skills() {
   return (
-    <div className="grid grid-cols-4 gap-5">
+    <div className="grid grid-cols-1 sm:grid-cols-4 gap-5">
       <div className="max-w-sm bg-background border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <div className="p-5">
           <a href="#">
