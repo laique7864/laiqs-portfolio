@@ -12,21 +12,37 @@ function page() {
         <figure className="relative w-full h-full">
           <a href="#">
             <Image
-              className="w-full h-full object-cover "
               src={banner}
               alt="image description"
+              layout="fill"
+              objectFit="cover"
               style={{ position: "absolute" }}
             />
           </a>
-          <figcaption className="absolute px-4 text-lg text-text bottom-6 dark:text-primary w-2/3">
+          <figcaption
+            className="absolute px-4 md:text-6xl text-lg  text-text bottom-6  dark:text-primary w-2/3"
+            style={{
+              left: "50%",
+              transform: "translateX(-50%)",
+              textAlign: "center",
+              top: "50%",
+            }}
+          >
             <p>
-            Hello <Greeting/> and welcome! So glad you're here. Take a moment to wander through my projects this portfolio show  my professional journey and a reflection of my passion. </p>
+              Fullstack Developer
+              <br />
+              Mohd Laiqur Rahman
+            </p>
+          </figcaption>
+          <figcaption className="absolute px-4 text-sm md:text-lg text-text bottom-6 dark:text-primary w-2/3">
+            <p>
+              Hello <Greeting /> and welcome! So glad you're here.
+            </p>
           </figcaption>
         </figure>
       </div>
 
       <div className="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-     
         {/* <ul className="hidden text-sm font-medium text-center text-gray-500 divide-x divide-gray-200 rounded-lg sm:flex dark:divide-gray-600 dark:text-gray-400 rtl:divide-x-reverse" id="fullWidthTab" data-tabs-toggle="#fullWidthTabContent" role="tablist">
         <li className="w-full">
             <button id="stats-tab" data-tabs-target="#stats" type="button" role="tab" aria-controls="stats" aria-selected="true" className="inline-block w-full p-4 rounded-ss-lg bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">Statistics</button>
@@ -48,7 +64,7 @@ function page() {
             role="tabpanel"
             aria-labelledby="stats-tab"
           >
-            <dl className="grid grid-cols-1 sm:grid-cols-4 gap-5 max-w-screen-xl justify-evenly r  p-4 mx-auto text-gray-900  xl:grid-cols-6 dark:text-white sm:p-8">
+            <dl className="grid grid-cols-1 sm:grid-cols-4 gap-5 max-w-screen-xl justify-evenly   p-4 ml-auto text-gray-900  xl:grid-cols-6 dark:text-white sm:p-8">
               <div className="flex flex-col items-center justify-center">
                 <dt className="mb-2 text-3xl font-extrabold">2+ Year</dt>
                 <dd className="text-gray-500 dark:text-gray-400">Experince</dd>
@@ -154,8 +170,8 @@ function page() {
             </div>
         </div> */}
         </div>
-        <div className="p-10">
-          <h1 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-primary px-4  text-text">
+        <div className="p-10 pl-28">
+          <h1 className="mb-2 p-4  pl-10 text-2xl font-bold tracking-tight text-gray-900 dark:text-primary px-4  text-text">
             Project
           </h1>
           <Projects />
@@ -163,11 +179,10 @@ function page() {
 
         <div className="p-10">
           <h1 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-primary px-4  text-text">
-          What i Know
+            What i Know
           </h1>
           <Skills />
         </div>
-        
       </div>
     </div>
   );
