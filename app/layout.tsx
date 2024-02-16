@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Topbar from "./component/Topbar";
 import Sidebar from "./component/Sidebar";
+import Footer from "./component/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,13 +18,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`font-inter ${inter.className} bg-background scroll-smooth`}>
+    <html lang="en" className={`font-inter ${inter.className} bg-white scroll-smooth`}>
       <body className="m-0 p-0">
       <Topbar />
         <div >
-          {/* <Sidebar /> */}
           <main >{children}</main>
         </div>
+        <Footer/>
       </body>
     </html>
   );

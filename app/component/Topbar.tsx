@@ -2,19 +2,20 @@ import React from "react";
 import logo from "../assets/main-logo.png";
 import Image from "next/image";
 import { HomeOutlined } from "@ant-design/icons";
+import Link from "next/link";
 
 function Topbar() {
   return (
-    <div className="sticky  top-0 start-0 z-[10000] flex justify-between w-full p-2 border-b border-gray-200 bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+    <div className="sticky  top-0 start-0 z-[10000] flex justify-between w-full p-2 border-b border-gray-200 bg-gray-100 dark:bg-gray-700 dark:border-gray-600">
       <div className="flex justify-between items-center w-full px-4 py-2  text-text">
         <a href="/" className="flex items-center">
           <Image src={logo} className="h-16 w-14" alt="Portfolio Logo" />
         </a>
         <div className="bg-gray-800 hidden md:block text-white py-2 px-4 rounded-full">
           <nav className="hidden md:flex justify-center items-center gap-4">
-            <a href="#" className="text-white hover:text-gray-300 mb-2">
+            <Link href="/" className="text-white hover:text-gray-300 mb-2">
               <HomeOutlined />
-            </a>
+            </Link>
             <a href="#" className="hover:text-gray-300">
               Services
             </a>
@@ -24,9 +25,9 @@ function Topbar() {
             <a href="#" className="hover:text-gray-300">
               About
             </a>
-            <a href="#" className="hover:text-gray-300">
+            <Link  href="/contactus" className="hover:text-gray-300">
               Contact
-            </a>
+            </Link >
           </nav>
         </div>
 
